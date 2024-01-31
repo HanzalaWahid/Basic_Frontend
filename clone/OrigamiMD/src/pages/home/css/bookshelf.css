@@ -1,0 +1,90 @@
+#navigator
+{
+	display: flex;
+	margin-bottom: 40px;
+}
+
+#navigator #import
+{
+	font-size: 60px;
+	font-family: Outfit;
+	color: #5C8374;
+	margin-right: 10px;
+}
+
+#navigator #tabs
+{
+	flex: 1;
+	font-size: 1.5em;
+	border-bottom: 1px solid #183D3D;
+}
+
+#navigator #tabs button
+{
+	height: 100%;
+	margin: 0 2% 0 2%;
+	
+	font-family: Outfit;
+	font-weight: light;
+	font-size: 25px;
+	color: #93B1A6;
+}
+
+#navigator #tabs .selected
+{
+	border-bottom: 2px solid #93B1A6;
+}
+
+/* ------------------------------------- */
+
+#library
+{
+	justify-content: center;
+}
+
+#library .book
+{
+	all:unset;
+	max-width: 200px;
+	cursor: pointer;
+	margin: 0px 5px 30px 5px;
+}
+
+.book .cover
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.book .cover .cover_img
+{
+	width: 100%;
+}
+
+/* .book .cover .cover_img
+{
+	width: 90%;
+}
+
+.book .cover .cover_slider
+{
+	width: 5%;
+	padding: 2%;
+	-webkit-appearance: slider-vertical;
+} */
+
+.book .book_title
+{
+	color: #fff;
+	font-family: Outfit;
+	font-size: 16pt;
+
+	margin-top: 10px;
+}
+
+.book .book_author
+{
+	color: #183D3D;
+	font-family: Outfit;
+	font-size: 14pt;
+}

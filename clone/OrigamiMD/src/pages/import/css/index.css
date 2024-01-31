@@ -1,0 +1,14 @@
+body
+{
+	padding: 30px;
+	background: #040D12;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100%;
+	grid-gap: 20px;
+}
+
+#web_match, #file
+{
+	height: calc(100vh - 60px);
+}

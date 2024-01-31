@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+
+		<link rel="stylesheet" href="../../styles/reset.css"      >
+		<link rel="stylesheet" href="../../styles/scroll.css">
+
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/navbar.css">
+
+		<link rel="stylesheet" href="css/bookshelf.css">
+		<link rel="stylesheet" href="css/sidebar.css">
+
+		<script src="js/index.js" defer></script>
+		<script src="js/navbar.js" defer></script>
+
+		<title>Origami</title>
+	</head>
+
+	<body>
+		<div id="navbar">
+			<img id="ori" src="../../../res/ori.png" />
+			<img id="search_index_icon" src="../../../res/icons/search-interface-symbol.png"/>
+			<input type="text" id="search_box" placeholder="Search bookshelf..." />
+		</div>
+		<div id="content">
+			<div id="bookshelf">
+				<div id="navigator">
+					<button id="import">+</button>
+					<div id="tabs">
+						<button class="tab selected">All</button>
+						<!-- <button class="tab">Drama</button>
+						<button class="tab">Comedy</button>
+						<button class="tab">Science</button> -->
+						<button class="tab">...</button>
+					</div>
+				</div>
+				<div id="library">
+				</div>
+			</div>
+			<div id="sidebar">
+				<div id="resume">
+					<h1>Resume where you left off...</h1>
+					<button class="book">
+						<div class="cover">
+							<img class="cover_img" src="../../../res/tmp/cover.png"/>
+							<!-- <input type="range" min="0" max="100" value="50" class="cover_slider" disabled /> -->
+						</div>
+						<div class="info">
+							<h2 class="book_title">O Diário de Anne Frank</h2>
+							<h3 class="book_author">Anne Frank</h2>
+						</div>
+					</button>
+				</div>
+				<div id="quote">
+					<p id="text">
+						Adormeço com a ideia tola de querer ser diferente do que sou, ou de que
+						não sou como queria ser. E de que faço tudo ao contrário.
+					</p>
+					<p id="author">— Anne Frank</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
