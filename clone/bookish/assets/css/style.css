@@ -452,66 +452,65 @@ body {
 
 
 /*-----------------------------------*\
-  #BENEFITS
+  #About US 
 \*-----------------------------------*/
 
-.benefits .section-text {
+
+.about-us .section-text {
   text-align: center;
-  margin-block: 8px 25px;
+  margin-block: 20px 25px; /* Adjust the top and bottom margins as needed */
 }
 
-.benefits-card {
-  padding: 25px;
-  box-shadow: var(--shadow-2);
-  border-radius: var(--radius-5);
-  overflow: hidden;
-  transition: var(--transition-2);
-}
-
-.benefits-card::before,
-.benefits-card::after {
-  bottom: 0;
-  right: 0;
-  clip-path: var(--polygon);
-  transition: var(--transition-2);
-}
-
-.benefits-card::before {
-  width: 80px;
-  height: 80px;
-  background-color: var(--old-rose_30);
-  transform: translateY(60px);
-}
-
-.benefits-card::after {
-  width: 70px;
-  height: 70px;
-  background-color: var(--chinese-violet_30);
-  transform: translateY(65px);
-}
-
-.benefits-card:is(:hover, :focus-within) { transform: translateY(-10px); }
-
-.benefits-card:is(:hover, :focus-within)::before,
-.benefits-card:is(:hover, :focus-within)::after { transform: translateY(0); }
-
-.benefits-card:is(:hover, :focus-within)::after { transition-delay: 0.1s; }
-
-.benefits-card .card-icon {
-  background-color: var(--old-rose);
-  max-width: max-content;
-  padding: 10px;
-  box-shadow: var(--shadow-3);
-  transition: var(--transition-1);
-}
-
-.benefits-card:is(:hover, :focus) .card-icon { box-shadow: none; }
-
-.benefits-card .card-title { margin-block: 20px 15px; }
-
-.benefits-card .btn-link { margin-block-start: 15px; }
-
-
+ .about-us-card {
+   padding: 25;
+   box-shadow: var(--shadow-2);
+   border-radius: var(--radius-5);
+   overflow: hidden;
+   transition: var(--transition-2);
+ }
+ 
+ .about-us-card::before,
+ .about-us-card::after {
+   bottom: 0;
+   right: 0;
+   clip-path: var(--polygon);
+   transition: var(--transition-2);
+ }
+ 
+ .about-us-card::before {
+   width: 80px;
+   height: 80px;
+   background-color: var(--old-rose_30);
+   transform: translateY(60px);
+ }
+ 
+ .about-us-card::after {
+   width: 70px;
+   height: 70px;
+   background-color: var(--chinese-violet_30);
+   transform: translateY(65px);
+ }
+ 
+ .about-us-card:is(:hover, :focus-within) { transform: translateY(-10px); }
+ 
+ .about-us-card:is(:hover, :focus-within)::before,
+ .about-us-card:is(:hover, :focus-within)::after { transform: translateY(0); }
+ 
+ .about-us-card:is(:hover, :focus-within)::after { transition-delay: 0.1s; }
+ 
+ .about-us-card .card-icon {
+   background-color: var(--old-rose);
+   max-width: max-content;
+   padding: 10px;
+   box-shadow: var(--shadow-3);
+   transition: var(--transition-1);
+ }
+ 
+ .about-us-card:is(:hover, :focus) .card-icon { box-shadow: none; }
+ 
+ .about-us-card .card-title { margin-block: 20px 15px; }
+ 
+ .about-us-card .btn-link { margin-block-start: 15px; }
 
 
 
@@ -648,16 +647,21 @@ body {
 .author .section-text { font-size: unset; }
 
 
-
-
-
 /*-----------------------------------*\
   #ACHIEVEMENT
 \*-----------------------------------*/
 
 .section.achievement { background-color: var(--white); }
 
+.grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .achievement-card {
+  width: calc(50% - 20px); /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust spacing between cards */
   background-color: var(--seashell);
   box-shadow: var(--shadow-4);
   overflow: hidden;
@@ -666,9 +670,22 @@ body {
 
 .achievement-card:is(:hover, :focus-within) { transform: translateY(-10px); }
 
-.achievement-card .card-content {
+.card-content {
   position: relative;
   padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 10px; /* Adjust spacing */
+}
+
+.card-content p {
+  margin: 0; /* Remove default margin */
+  flex: 1; /* Allow text to take up remaining space */
 }
 
 .achievement-card .abs-img {
@@ -678,6 +695,11 @@ body {
   opacity: 0.3;
 }
 
+@media (max-width: 768px) {
+  .achievement-card {
+    width: 100%; /* Set each card to take up full width on smaller screens */
+  }
+}
 
 
 
@@ -782,6 +804,9 @@ textarea.input-field {
 
 .footer-list {
   display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 20px;
@@ -1058,8 +1083,11 @@ textarea.input-field {
   .navbar.active { all: unset; }
 
   .navbar-list {
-    margin-block-end: 0;
+    /* margin-block-end: 0; */
     display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     gap: 30px;
   }
 
@@ -1270,5 +1298,154 @@ h3, h4 {
 
 .btn-website:hover {
   background-color: F5EBE5;
+}
+
+.reviews {
+  text-align: center;
+  font-family: var(--ff-philosopher);
+}
+
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  width: 48%;
+  background-color: ;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-card .rating {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.review-card .comment {
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.review-card .author {
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.review-form,
+.feedback-form {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.review-form h3,
+.feedback-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review-form label,
+.feedback-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.review-form select,
+.feedback-form input[type="text"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.review-form textarea,
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.review-form input[type="submit"],
+.feedback-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color:  #A6B5C8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.review-form input[type="submit"]:hover,
+.feedback-form input[type="submit"]:hover {
+  background-color:  #A6B5C8;
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .review-container {
+    flex-direction: column;
+  }
+  
+  .review-card {
+    width: 100%;
+  }
+  
+  .form-container {
+    flex-direction: column;
+  }
+  
+  .review-form,
+  .feedback-form {
+    width: 100%;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .review-card {
+    padding: 15px;
+  }
+  
+  .review-card .rating {
+    font-size: 1.2rem;
+  }
+  
+  .review-card .comment {
+    font-size: 0.8rem;
+  }
+  
+  .review-card .author {
+    font-size: 0.7rem;
+  }
+  
+  .review-form select,
+  .feedback-form input[type="text"],
+  .feedback-form textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .review-form input[type="submit"],
+  .feedback-form input[type="submit"] {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
 
